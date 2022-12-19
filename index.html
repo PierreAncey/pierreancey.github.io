@@ -206,6 +206,68 @@
       <!-- </div> -->
     </section><!-- End NLP Section -->
 
+    <section id="regression" class="section-white-bg">
+      <style>
+        #budget, #year, #predict-button, #result {
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+          text-align: center;
+        }
+        .regression {
+          margin-bottom: 50px;
+        }
+      </style>
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Regression</h2>
+          <p>Revenue regression result:</p>
+        </div>
+
+        <!-- Inputs -->
+        <div class="row justify-content-around regression">
+           <!-- Create an input element for the user to enter an integer value -->
+           <div class="col-auto">
+        
+            <input class="form-control" type="text" inputmode="numeric" id="budget" placeholder="Budget" min=0 max=300000000, value="0">
+           </div>
+           <div class="col-auto">
+            <input class="form-control" type="text" inputmode="numeric" id="year" placeholder="Year" min=0, value="1800">
+           </div>
+        </div>
+
+        <!-- Output -->
+        <div class="row regression">
+          <div class="col">
+            <button id="predict-button" class="btn btn-outline-primary" onclick="predictRevenue()">Predict</button>
+          </div>
+        </div>
+        <!-- # Create a div to display the result -->
+        <div class="row">
+          <div class="col">
+            <div id="result"></div>
+          </div>
+        </div>
+
+        <!-- # Creata javascript function to predict the revenue -->
+        <script>
+          function predictRevenue() {
+            // Get the value of the input elements
+            var budget = document.getElementById("budget").value;
+            var year = document.getElementById("year").value;
+
+            // Make a prediction using the model
+            var prediction = budget*year
+
+            // Put the result into the div
+            document.getElementById("result").innerHTML = "<p>Result: "+prediction+"</p>";
+          }
+        </script>
+        
+
+    </section><!-- End Regression Section -->
+
 
     <!-- ======= Team Section ======= -->
     <section id="team" class="team section-bg">
@@ -262,8 +324,8 @@
                     <p>Life Science Engineering | Life Sciences department&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
                   </div>
                   <div class="social">
-                    <a href="https://www.linkedin.com/in/bettina-weber-b21508255/" target="_blank" rel="noopener noreferrer"> <i class="ri-linkedin-box-fill"></i> </a>
-                    <a href="https://github.com/bettinaweber" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
+                    <!-- <a href="https://www.linkedin.com/in/bettina-weber-b21508255/" target="_blank" rel="noopener noreferrer"> <i class="ri-linkedin-box-fill"></i> </a>
+                    <a href="https://github.com/bettinaweber" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a> -->
                     <a href="mailto: bettina.weber@epfl.ch"><i class="bi bi-envelope-fill"></i></a>
                   </div>
                 </div>
@@ -283,7 +345,7 @@
                   </div>
                   <div class="social">
                     <a href="https://www.linkedin.com/in/sam-jegou-b570a01ba/" target="_blank" rel="noopener noreferrer"> <i class="ri-linkedin-box-fill"></i> </a>
-                    <a href="https://github.com/SamJegou" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
+                    <!-- <a href="https://github.com/SamJegou" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a> -->
                     <a href="mailto: sam.jegou@epfl.ch"><i class="bi bi-envelope-fill"></i></a>
                   </div>
                 </div>
