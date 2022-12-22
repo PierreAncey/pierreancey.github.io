@@ -89,13 +89,13 @@
         </div>
 
         <div class="row content">
-          <div class="col-lg-6">
-            <p>
-            Movies are often criticized for not accurately representing the population. 
-            For example, historically, most movie characters have been male. 
-            The women that are present are shown mainly in stereotyped roles such as housewives and secretaries. 
-            The goal of this project is to look at diversity in movies over time and see how it influences a movies success using the CMU Movie Summary Corpus. 
-            The first step is to analyze the diversity in the movies, focusing primarily on gender. 
+            <p class="text-justify">
+              Nowadays it's hard to imagine our lives without movies. They have the ability to portray a snapshot of reality and show it to people that could never have seen it otherwise. 
+              However, within their realities, movies are often criticized for not accurately representing the population. For example, historically, it is often said that women are vastly underrepresented. 
+              The goal of this project is to look at gender diversity in movies over time and see how it influences a movie's success using the CMU Movie Summary Corpus. 
+              
+              Not a data scientist? Don't worry! We've added some purple boxes with explanations along the way to help you out.
+              
             <!-- The next step would be to analyze how people are represented. 
             This would be done using sentiment analysis on the mentions of characters in the plot summary to see whether specific groups are portrayed in a more positive/negative light than others. 
             Finally, we will take all of this into account when trying to establish if what we learned influences the rating as well as revenue of a movie. -->
@@ -109,13 +109,35 @@
               <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
               <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
             </ul> -->
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
+        </div>
+        <div class="row content pt-5">
+          <div class="col-lg-6 pt-4 pt-lg-0 text-justify">
             <p>
-              The next step would be to analyze how people are represented. 
-              This would be done using sentiment analysis on the mentions of characters in the plot summary to see whether specific groups are portrayed in a more positive/negative light than others. 
-              Finally, we will take all of this into account when trying to establish if what we learned influences the rating as well as revenue of a movie.
+              How many Female Characters are There?
+              The average fraction of women in the over 40'000 movies in the CMU Movie Summary Corpus is 39%. That sounds very close to 50% right?
+              However, since the dataset was extracted from English language Wikipedia and English language movies logically make up the majority of 
+              them we took a look at that number in only the English language movies. We have only 33% of female actors in that group! 
             </p>
+          </div>
+          <style>
+            .box {
+              border: thick solid rgb(128, 0, 128, 0.2);
+              border-radius: 25px;
+              background-color: rgb(128, 0, 128, 0.2);
+              padding: 10px;
+            }
+            .text-justify{
+              text-align: justify;
+              text-justify: inter-word;
+            }
+          </style>
+          <div class="col-lg-6">
+            <div class="d-flex justify-content-center box text-justify">
+              What is the CMU Movie Summary Corpus?
+            The CMU Movie Summary Corpus consists of 42,306 movie plot summaries extracted from the November 2, 2012, dump of English-language Wikipedia. 
+            It was then coupled with data from the November 4, 2012, dump of Freebase to add metadata on the movie and information on the actors.
+
+            </div>
             <!-- <p>
               Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
               velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
@@ -356,7 +378,7 @@
           <div class="col-lg-6 mt-4">
             <div class="member align-items-start" data-aos="zoom-in" data-aos-delay="400">
               <div class="row">
-              <div class="col-4 fix-image-div"><img src="assets/img/team/team-4.jpg" class="pic" alt=""></div>
+              <div class="col-4 fix-image-div"><img src="assets/img/team/alice.png" class="pic" alt=""></div>
               <div class="member-info col-8 ">
                 <h4>Alice</h4>
                 <span>Story Teller & Analyst</span>
