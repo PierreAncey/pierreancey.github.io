@@ -12,7 +12,7 @@ body {
   font-family: "Open Sans", serif;
   color: #444444;
   line-height: 2;
-  font-size: 17px;
+  font-size: 19px;
 }
 
 a {
@@ -414,6 +414,7 @@ h6 {
   font-weight: 700;
   line-height: 56px;
   color: #fff;
+  line-height: 1.4;
 
   text-shadow: 0 0 5px black, 0 0 5px black, 0 0 5px black, 0 0 5px black;
 }
@@ -545,6 +546,12 @@ section {
   overflow: hidden;
 }
 
+hr {
+  width:30%;
+  margin:0 auto;
+  border-top: 3px solid hwb(308 1% 49%);
+}
+
 .section-bg {
   background-color: #f3f5fa;
 }
@@ -628,7 +635,7 @@ section {
   display: block;
   width: 40px;
   height: 3px;
-  background: hwb(308 1% 49%);
+  background: hwb(308 1% 49% / 0.445);
   bottom: 0;
   left: calc(50% - 20px);
 }

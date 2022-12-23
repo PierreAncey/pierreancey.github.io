@@ -131,12 +131,14 @@
               text-align: justify;
               text-justify: inter-word;
             }
+      
           </style>
           <div class="col-lg-6">
             <div class="justify-content-center box text-justify">
               <h5 class="text-center">What is the CMU Movie Summary Corpus?</h5>
               <p> The CMU Movie Summary Corpus consists of 42,306 movie plot summaries extracted from the November 2, 2012, dump of English-language Wikipedia. 
                 It was then coupled with data from the November 4, 2012, dump of Freebase to add metadata on the movie and information on the actors.</p>
+                <hr>
             </div>
             <!-- <p>
               Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
@@ -168,42 +170,50 @@
         <div class="row content align-items-center">
             <div class="col-lg-6 pt-4 pt-lg-0 text-justify align-middle">
               <h4>That's just because of old movies right?</h4>
+              <div class="row bspace25"></div>
                 <b>Wrong!</b> As can be seen in the graph below the fraction of women has been relatively constant over the years, only climbing above 50% during WWII. 
             </div>
             <div class="col">
               <img src="assets/img/Female_actors_over_time.png" class="img-fluid" alt="">
             </div>
         </div>
+
+        <div class="row bspace100"></div>
+        <div class="row bspace50"></div>
         
         <div class="row content align-items-center">
-          <h3 class="text-center">From Gender Gap to Age Gap</h3>
+          <h3 class="text-center bspace50">From Gender Gap to Age Gap</h3>
           <p class="text-center">We've all seen movie couples that have huge age gaps in the people portraying them. But are women also younger overall? </p>
-          <div class="col-lg-6 pt-4 pt-lg-0 text-justify">
+
+          <!-- <div class="row bspace50"></div> -->
+          <div class="col-lg-9 pt-4 pt-lg-0 text-justify">
             <img src="assets/img/actors_age_over_time.png" class="img-fluid" alt="">
           </div>
           <div class="col">
             <p class="text-justify">
             On average women are about 25 whereas men are closer to 35. As can be seen in the graph above women are consistently about 10 years younger than men over the timespan of the data. 
-          </p>
-          <style>
-            .width-limiter{
-              width: 85%;
-            }
-          </style>
-          <div class="width-limiter">
-            <div class="row box text-justify align-items-center">
-              <div class="col-5">
-                <h5 class="text-center">Is this surprising, George ?</h5>
-                <p>  Take a minute to gather all the most attractive men and women you can think of. In general, men were much older, weren't they ?</p>
-              </div>
-              <div class="col align-self-end align-items-center">
-                <img src="assets/img/george2.jpg"  alt="" height="220" width="200">
-              </div>
-            </div>
-          </div> 
+          </p>         
           </div>
 
 
+
+        </div>
+
+        <div class="row text-justify align-items-center text-center justify-content-center">
+          <div class="col-5">
+            <div class="row box">
+              <div class="col-7">
+                <h5 class="text-center">Is this surprising, George ?</h5>
+            <p>  Take a minute to gather all the most attractive men and women you can think of. In general, men were much older, weren't they ?</p>
+            
+          </div>
+          <div if="img-fix" class="col align-self-center ">
+            <img src="assets/img/george2.jpg" class="img-fluid" alt="" height="260" width="230">
+          </div>
+          <div class="row"><div class="col4"><hr></div></div>
+          </div>
+              
+            </div>
         </div>
 
       </div>
@@ -243,6 +253,7 @@
                   <h5 class="text-center">What's with the Token Lemurs ?</h5>
                   <p>  When a text is tokenized it is split into individual tokens (≈words). 
                     Lemmatization maps different versions of the same normalized words. For example, talking and talked would both become talk.</p>
+                    <hr>
               </div>
             </div>
 
@@ -326,6 +337,19 @@
     -o-transform:scale(0.8);
     -ms-transform:scale(0.8);
 }    
+    /* Create a class for bottom padding */
+    .bspace100{
+      margin-bottom: 100px;
+    }
+    .bspace50{
+      margin-bottom: 50px;
+    }
+    .bspace25{
+      margin-bottom: 25px;
+    }
+    .bspace10{
+      margin-bottom: 10px;
+    }
         </style>
 
 
@@ -363,8 +387,10 @@
             <div class="box text-justify">
               <h5 class="text-center">What's matching?</h5>
               <p>  We all know not all movies are the same and as we saw earlier a lot of factors could be influencing our result. To account for this, matching takes movies that are as similar as possible to each other except for the variable of interest (which is gender ratio here) and pairs them up so they can be compared to each other.</p>
+              <hr>
+            </div>
           </div>
-          </div>
+          
         </div>
 
 
@@ -497,7 +523,11 @@
           text-align: center;
         }
         .regression {
-          margin-bottom: 50px;
+          margin-top: 80px;
+          margin-bottom: 40px;
+        }
+        .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+            background-color: hwb(308 1% 49%) !important;
         }
       </style>
 
@@ -519,6 +549,7 @@
             </p>
             </div>
         </div>
+        <div class="bspace100"></div>
         <!-- Inputs -->
         <div class="row justify-content-around regression">
            <!-- Create an input element for the user to enter an integer value -->
@@ -559,7 +590,7 @@
         <!-- Output -->
         <div class="row regression">
           <div class="col">
-            <button id="predict-button" class="btn btn-outline-primary" onclick="predictRevenue()">Predict</button>
+            <button id="predict-button" class="btn btn-primary" onclick="predictRevenue()">Predict</button>
           </div>
         </div>
         <!-- # Create a div to display the result -->
@@ -568,6 +599,7 @@
             <div id="result"></div>
           </div>
         </div>
+      </div>
 
         <!-- # Creata javascript function to predict the revenue -->
         <script>
