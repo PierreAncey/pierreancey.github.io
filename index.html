@@ -204,9 +204,7 @@ However, since the dataset was extracted from English language Wikipedia, movies
         
         <div class="row content align-items-center bspace75">
           <h4 class="text-center bspace50">From Gender Gap to Age Gap</h4>
-          <p class="text-center bspace25">We have all seen movie couples that have huge age gaps in the people portraying them. But are actresses also younger overall ? 
-            On average female actors are about 25 years old whereas male actors are closer to 35. As can be seen in the graph on the left, actresses are consistently about 10 years younger than actors over the timespan of the data.  </p>
-
+          <p class="text-justify bspace75">We have all seen movie couples that have huge age gaps in the people portraying them. But are actresses also younger overall ? 
           <!-- <div class="row bspace50"></div> -->
           <div class="col-lg-9 pt-4 pt-lg-0 text-justify">
             <img src="assets/img/actors_age_over_time.png" class="img-fluid" alt="" width="850">
@@ -227,7 +225,7 @@ However, since the dataset was extracted from English language Wikipedia, movies
             <div class="row box">
               <div class="col-lg-7">
                 <h5 class="text-center">Is this surprising, George ?</h5>
-            <p>  Take a minute to gather all the most attractive men and women you can think of. In general, the men were much older, weren't they ?</p>
+            <p class="text-justify">  Take a minute to gather all the most attractive men and women you can think of. In general, the men were much older, weren't they ?</p>
             
              </div>
           <div class="col-lg-5 align-self-center">
@@ -242,11 +240,11 @@ However, since the dataset was extracted from English language Wikipedia, movies
         <div class="row content align-items-center bspace75">
           <h4 class="bspace50 text-center"> Romance Films for Women, Action Movies for Men</h4>
           <div class="col-lg-5 pt-4 pt-lg-0 text-justify align-middle ">
-          <p>
+          <p class="text-justify">
             Here we can see that women make up the minority of characters across the genres that have more than 800 actors in them. Most interestingly, of 
             the five most represented genres in our dataset: Drama, Comedy, Romance Film, Thriller and Action, women make up more than 40% of the cast in only one:
              Romance (43%). Notice that the fraction of actresses is much higher in movies that are traditionally targeted at women (like Romance Films) in general when
-              compared to more traditionally masculine genres like Action Movies where the fraction of actresses is a measly 25.5%.
+              compared to more traditionally masculine genres like Action Movies where the fraction of actresses is measly 25.5%.
           </p>
           </div>
           <div class="col-lg-7">
@@ -270,19 +268,19 @@ However, since the dataset was extracted from English language Wikipedia, movies
         <div class="row content align-items-center bspace75">
           <h4 class= "text-center bspace75"> We have seen that men and women are present in different numbers on screen, but how are they described ?            </h4>
           <div class="col-lg-8 pt-4 pt-lg-0 text-justify align-middle">
-          <p>
+          <p class="text-justify">
             First, we will look into the positivity of mentions in the movie summaries by performing a sentiment analysis. This works by finding the sentences 
             that are associated with men or women and then counting the number of positive, negative or neutral words that are associated with them. Below you 
             can see a part of the movie summary of Cinderella with the male sentences highlighted in blue and the female sentences highlighted in pink. The words 
             that are marked in blue/pink are the ones that were used to determine whether a sentence is male or female. These words include pronouns like “he” or 
-            “she” as well as the character names if they were available in the dataset. If both male and female markers are present the sentence is not taken into 
+            “she” as well as the character names if they were available in the dataset. If both male and female markers are present, the sentence is not taken into 
             account. Before running the sentiment analysis, the summaries were tokenized, the stopwords were removed and everything was lemmatized.
           </p>
           </div>
           <div class="col-lg-4">
             <div class="box text-justify">
                 <h5 class="text-center">What are Tokenization,  Stopword Removal and  Lemmatization ?</h5>
-                <p>  When a text is tokenized it is split into individual tokens (≈words). 
+                <p class="text-justify">  When a text is tokenized it is split into individual tokens (≈words). 
                   In stopword removal all of the small words that do not add much information like “is” or “a” are removed.
                   Lemmatization maps different versions of the same normalized words. For example, talking and talked would both become talk.
                   </p>
@@ -570,7 +568,7 @@ Now we will a look at Action movies:
           <h2>Outlook</h2>
           <!-- <p>Revenue regression result:</p> -->
         </div>
-        <div class="row content align-items-center bspace75">
+        <div class="row content align-items-center bspace25">
             <p class="text-justify">
               We've seen that male and female actors are represented in very different numbers in movies and that there are vast differences across the genres. 
               We've also seen that men are described more negatively and that women are mostly talked about in relation to their relationships or reproduction. 
@@ -581,6 +579,19 @@ Now we will a look at Action movies:
               Finally, as you may know there is high variance in the revenue of films, which in our regression we interpreted as the consequence of the skills of your film production
                team which are represented by a score between -1 and 1. This predictor is implemented below.             </p>
               <p>We hope you have fun predicting film revenues!</p>
+        </div>
+        <div class="row content align-items-center bspace75">
+          <div class="col-lg-3"></div>
+          <div class="col-lg-6">
+          <div class="box text-justify">
+            <h5 class="text-center">Prediction example</h5>
+            <p class="text-justify">Let's take the movie “Da Vinci Code” from 2006. This is a thriller with a budget of 125 million and a  medium percentage of women. This author gives the movie a skill score 
+              of 0.7 since it is a great movie but is a poor adaptation of the book. The true revenue is 760 million dollars. Compare this to your prediction !
+              </p>
+              <hr>
+          </div>
+        </div>
+          <div class="col-lg-3"></div>
         </div>
 
         <div class="row content align-items-center bspace75">
