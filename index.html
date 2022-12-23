@@ -67,7 +67,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-          <h1>An analysis of the discriminations based on sexes in movies</h1>
+          <h1>Analysis of the Difference in Representation Based on Gender in Movies</h1>
 
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
@@ -125,6 +125,7 @@
               border-radius: 25px;
               background-color: rgb(128, 0, 128, 0.2);
               padding: 10px;
+              margin: auto;
             }
             .text-justify{
               text-align: justify;
@@ -132,11 +133,10 @@
             }
           </style>
           <div class="col-lg-6">
-            <div class="d-flex justify-content-center box text-justify">
-              What is the CMU Movie Summary Corpus?
-            The CMU Movie Summary Corpus consists of 42,306 movie plot summaries extracted from the November 2, 2012, dump of English-language Wikipedia. 
-            It was then coupled with data from the November 4, 2012, dump of Freebase to add metadata on the movie and information on the actors.
-
+            <div class="justify-content-center box text-justify">
+              <h5 class="text-center">What is the CMU Movie Summary Corpus?</h5>
+              <p> The CMU Movie Summary Corpus consists of 42,306 movie plot summaries extracted from the November 2, 2012, dump of English-language Wikipedia. 
+                It was then coupled with data from the November 4, 2012, dump of Freebase to add metadata on the movie and information on the actors.</p>
             </div>
             <!-- <p>
               Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
@@ -153,18 +153,272 @@
 
 
     <!-- ======= Graphs Section ======= -->
+    <style>
+      .text-center{
+        text-align: center;
+      }
+    </style>
     <section id="graphs" class="nlp section-bg">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
           <h2>Graphs</h2>
         </div>
 
-        <div id="divPage"><center><iframe src ="assets/test.html" height = "500", width ="1000" frameBorder="0"></iframe></center></div>
+        <!-- <div id="divPage"><center><iframe src ="assets/test.html" height = "500", width ="1000" frameBorder="0"></iframe></center></div> -->
+        <div class="row content align-items-center">
+            <div class="col-lg-6 pt-4 pt-lg-0 text-justify align-middle">
+              <h4>That's just because of old movies right?</h4>
+                <b>Wrong!</b> As can be seen in the graph below the fraction of women has been relatively constant over the years, only climbing above 50% during WWII. 
+            </div>
+            <div class="col">
+              <img src="assets/img/Female_actors_over_time.png" class="img-fluid" alt="">
+            </div>
+        </div>
+        
+        <div class="row content align-items-center">
+          <h3 class="text-center">From Gender Gap to Age Gap</h3>
+          <p class="text-center">We've all seen movie couples that have huge age gaps in the people portraying them. But are women also younger overall? </p>
+          <div class="col-lg-6 pt-4 pt-lg-0 text-justify">
+            <img src="assets/img/actors_age_over_time.png" class="img-fluid" alt="">
+          </div>
+          <div class="col">
+            <p class="text-justify">
+            On average women are about 25 whereas men are closer to 35. As can be seen in the graph above women are consistently about 10 years younger than men over the timespan of the data. 
+          </p>
+          <style>
+            .width-limiter{
+              width: 85%;
+            }
+          </style>
+          <div class="width-limiter">
+            <div class="row box text-justify align-items-center">
+              <div class="col-5">
+                <h5 class="text-center">Is this surprising, George ?</h5>
+                <p>  Take a minute to gather all the most attractive men and women you can think of. In general, men were much older, weren't they ?</p>
+              </div>
+              <div class="col align-self-end align-items-center">
+                <img src="assets/img/george2.jpg"  alt="" height="220" width="200">
+              </div>
+            </div>
+          </div> 
+          </div>
+
 
         </div>
 
       </div>
+
     </section><!-- End Graphs Section -->
+
+    <section id="new">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Continue</h2>
+        </div>
+        <div class="row content align-items-center">
+          <div class="col-lg-6 pt-4 pt-lg-0 text-justify align-middle">
+          <h3> Romance Films for Women, Action Movies for Men</h3>
+          <p>
+          Here we can see that women make up the minority of characters across the genres that have more than 800 actors in them. 
+          Most interestingly, of the five most represented genres in our dataset: Drama, Comedy, Romance Film, Thriller and Action women make up more than 40% of the cast in only one: Romance (43.1%). 
+          Notice that the fraction of women is much higher in movies that are traditionally targeted at women (like Romance Films) in general when compared to more traditionally masculine genres like 
+          Action Movies where the fraction of women is a measly 25.5%.
+          </p>
+          </div>
+          <div class="col">
+            <img src="assets/img/female_actors_movie_genres.png"  alt="" class="img-fluid">
+          </div>
+
+          <div class="row content align-items-center">
+            <div class="col-lg-6 pt-4 pt-lg-0 text-justify align-middle">
+            <h3> We've seen that men and women are present in different numbers on screen, but what about how they are portrayed?            </h3>
+            <p>
+              First let's dive into positivity of mentions in the movie summaries. This works by finding the sentences that are associated with men or women and then counting the number of positive, 
+              negative or neutral words that are associated with them. Below you can see an example of a movie summary with the male sentences highlighted in blue and the female sentences highlighted 
+              in pink. Before running sentiment analysis the summaries were tokenized the stopwords were removed and everything was lemmatized which is why only the colored words will stay
+            </p>
+            </div>
+            <div class="col">
+              <div class="box text-justify">
+                  <h5 class="text-center">What's with the Token Lemurs ?</h5>
+                  <p>  When a text is tokenized it is split into individual tokens (≈words). 
+                    Lemmatization maps different versions of the same normalized words. For example, talking and talked would both become talk.</p>
+              </div>
+            </div>
+
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="new">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Continue 2</h2>
+        </div>
+        <div class="row content align-items-center">
+          <style>
+            .rosa{
+              background-color: rgba(238, 136, 153, 0.25);
+              color: black;
+            }
+            .blue{
+              background-color: rgba(0, 191, 255, 0.25);
+              color: black;
+            }
+            .purple{
+              background-color: rgba(194, 25, 194, 0.25);
+              color: black;
+            }
+            .dark-blue{
+              color: rgb(8, 8, 218);
+              font-weight: bold;
+              
+            }
+            .dark-rosa{
+              color: rgb(255, 0, 255);
+              font-weight: bold;
+            }
+          </style>
+          <p>
+            … <span class="rosa"><span class="dark-rosa">Cinderella</span> arrives at the palace at 11:30; before <span class="dark-rosa">she</span> enters, 
+            <span class="dark-rosa">her</span> Godmother warns <span class="dark-rosa">her</span> not to stay past midnight.</span> <span class="blue">The <span class="dark-blue">Prince</span> 
+            has been bored by the attention of all the young ladies with whom <span class="dark-blue">he</span> has had to dance,
+             including the stepsisters.</span> <span class="purple"><span class="dark-rosa">Cinderella</span>'s grand entrance immediately attracts everyone's attention and intrigues the 
+             <span class="dark-blue">Prince</span>.</span> …
+          </p>
+          <p>
+            Now that we know how it works for one movie summary. Let's take a look at the positivity score over all movies.
+          </p>
+          <p>
+            The positive mentions are green, neutral gray and negative red. We can see that women tend to be described less negatively, while men are associated with less positive words. 
+            But we saw earlier that women tend to be more represented in Romance Films while men are the majority in Action Movies. Does this influence the results?
+          </p>
+
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="new">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>End-2</h2>
+        </div>
+
+        <style>
+          #containerworldTime {
+    height: 700px;
+    margin:auto;
+    overflow: hidden;
+    width: 395px;
+}
+#containerworldTime iframe {
+    border: 0 solid;
+    height: 1103px;
+    margin-left: -110px;
+    margin-top: -385px;
+    width: 979px;
+    -webkit-transform:scale(0.8);
+    -moz-transform:scale(0.8);
+    -o-transform:scale(0.8);
+    -ms-transform:scale(0.8);
+}    
+        </style>
+
+
+        <div class="row content align-items-center">
+          <div class="col-lg-8 pt-4 pt-lg-0 text-justify align-middle">
+          <h3>Comparison of the most used words</h3>
+          <p>Below you can see the words that appear in movie descriptions with a the highest probability of being male on the left and the same for female sentences on the right. We have added the results for romance and action movies as well as one more genre in the top 5 which we assumed would be less stereotypical: Comedy. </p>
+          <p>In an ideal world we would expect this result to show that words have about the same probability of being male or female but alas, we can conclude that we really didn't need to label the gender on the graphs. The genres are much more difficult to guess than the gender. The words in female sentences tend to be connected with their relationships or reproduction. What an unbiased world we live in… NOT.
+          </p>
+        </div>
+          <div class="col">
+            <div id="divPage"><center><iframe src ="assets/img/words/Action_most_feminine_words.html" height = "400", width ="300" scrolling="no" frameborder="0" ></iframe></center></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="new">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>End-1</h2>
+        </div>
+
+
+        <div class="row content align-items-center">
+          <div class="col-lg-8 pt-4 pt-lg-0 text-justify align-middle">
+          <h3>Cool story bro, but how will this make me more successful?</h3>
+          <p>To answer this question we will first have to take a look at how to define success. We decided to take both the revenue of the movie as well as the average rating of users into account. As suggested by the correlation of 0.23 the link between revenue and rating or budget and rating is very unclear, and the definition of success is thus very important. In the following we defined it as the revenue first, and then as the average rating.
+          
+            When looking at the median box office revenue of two groups, 
+            the first group (blue) representing movies with a low percentage of women and the treated group that contains movies with a percentage of 
+            women higher than average, we first observe that movies with less women than average seem to be more successful. </p>
+          </div>
+          <div class="col">
+            <div class="box text-justify">
+              <h5 class="text-center">What's matching?</h5>
+              <p>  We all know not all movies are the same and as we saw earlier a lot of factors could be influencing our result. To account for this, matching takes movies that are as similar as possible to each other except for the variable of interest (which is gender ratio here) and pairs them up so they can be compared to each other.</p>
+          </div>
+          </div>
+        </div>
+
+
+        <div class="row content align-items-center">
+          <div class="col-lg-6 pt-4 pt-lg-0 text-justify align-middle">
+          <p>
+            However, when performing a matching study 
+            where movies were matched between these two groups based on release year, budget and movie genres, we realize that there is an opposite trend: movies with more women than the average seem to be more successful! However the 
+            difference is not statistically significant, so we cannot conclude from these results whether one group is more successful than the other.
+            </p>
+          </div>
+          <div class="col-3">
+            <img src="assets/img/revenue_before_matching.png"  alt="" class="img-fluid">
+          </div>
+          <div class="col-3">
+            <img src="assets/img/revenue_after_matching.png"  alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="new">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>End</h2>
+        </div>
+
+
+
+        <div class="row content align-items-center">
+          <div class="col-lg-6 pt-4 pt-lg-0 text-justify align-middle">
+          <p>
+            When we go through the same procedure with the rating as the measure of success we observe a similar result. This time, there is statistically significant difference, but the effect size is small.
+
+          People seem to rate movies slightly higher if they have more gender diversity, however, this does not translate to revenue giving Hollywood very little incentive to change anything.
+
+            </p>
+          </div>
+          <div class="col-3">
+            <img src="assets/img/ratings_before_matching.png"  alt="" class="img-fluid">
+          </div>
+          <div class="col-3">
+            <img src="assets/img/ratings_after_matching.png"  alt="" class="img-fluid">
+          </div>
+        </div>
+        <div class="row">
+          <h3> Outlook</h3>
+          <p>We've seen that male and female actors are represented in very different numbers in movies and that there are vast differences across the genres. We've also seen that men are described more negatively and that women are mostly talked about in relation to their relationships or reproduction. Finally, we saw that more diverse movies don't necessarily make more money but might be rated higher among viewers.
+            Below there's a fun little toy to predict the revenue of a film! You can choose its genre, the budget (typically 10 to 100 million dollars), the release year for future projects or to dive in the past and the percentage of women in the film (low, medium, high with respect to the mean percentage).
+            Finally, as you may know there is a high variance in the revenue of films, which we will interpret as the consequence of the skills of your team (director, actors, …). You can evaluate your production teams skills by a score between -1 and 1.            
+          </p>
+        </div>
+      </div>
+    </section>
 
 
     <!-- ======= NLP Section ======= -->
@@ -252,7 +506,19 @@
           <h2>Regression</h2>
           <!-- <p>Revenue regression result:</p> -->
         </div>
-
+        <div class="row">
+          <div class="col">
+            <p class="text-justify">
+              Here is a little toy to predict the revenue of a film! You can choose its genre, the budget (typically 10 to 100 million dollars), 
+              the release year for future projects or to dive in the past and the percentage of women in the film (low, medium, high with respect to the mean percentage).
+              Finally, as you may know there is a high variance in the revenue of films, which we will interpret as the consequence of the skills of your team (director, actors, …).
+              You can evaluate your skills by a score between -1 and 1.
+            </p>
+            <p class="text-justify">
+              Example: Da Vinci Code, a 2006 American Thriller, with a budget of 125 million dollars, we suppose a medium gender balance (at the mean), and medium skills at 0.5 (the film is great, but a poor adaptation of the original book). The true movie revenue is 757 million dollars.
+            </p>
+            </div>
+        </div>
         <!-- Inputs -->
         <div class="row justify-content-around regression">
            <!-- Create an input element for the user to enter an integer value -->
@@ -268,12 +534,12 @@
             </select>
            </div>
            <div class="col-auto">
-            <p class="clean">Movie budget:</p>
-            <input class="form-control" type="text" inputmode="numeric" id="budget" step="1" placeholder="Budget" min=0 max=300000000 value="0">
+            <p class="clean">Movie budget (in M$):</p>
+            <input class="form-control" type="text" inputmode="numeric" id="budget" step="1" placeholder="Budget" min=0 max=3000 value="0">
            </div>
            <div class="col-auto">
             <p class="clean">Movie release year:</p>
-            <input class="form-control" type="text" inputmode="numeric" id="year" step="1" placeholder="Year" min=1700 max =2021 value="0">
+            <input class="form-control" type="text" inputmode="numeric" id="year" step="1" placeholder="Year" min=1700 max =2022 value="0">
            </div>
            <div class="col-auto">
             <p class="clean">Percentage of women:</p>
@@ -308,7 +574,7 @@
           function predictRevenue() {
             // Get the value of the input elements
             var mtype = document.getElementById('mtype').value;
-            var budget = document.getElementById("budget").value;
+            var budget = document.getElementById("budget").value*1000000;
             var year = document.getElementById("year").value;
             var percentage = document.getElementById('percentage').value;
             var skills = document.getElementById("skills").value;
@@ -322,16 +588,15 @@
                 switch (percentage){
                   case "1":
                     // [('Intercept', 3.1182027323125148), ('log_budget', 0.9912122656981948), ('Movie_release_date', -0.0014340614869475955), ('std', 0.6908714578738936)]
-                    result = Math.pow(10, 3.1182027323125148 + 0.9912122656981948 * Math.log10(budget) - 0.0014340614869475955 * (year) + skills);
-                    alert("Test")
+                    result = Math.pow(10, 3.1182027323125148 + 0.9912122656981948 * Math.log10(budget) - 0.0014340614869475955 * (year) + skills*0.6908714578738936);
                     break;
                   case "2":
                     // [('Intercept', 3.1182027323125148), ('C(group)[T.2]', 0.053166565938191204), ('log_budget', 0.9912122656981948), ('Movie_release_date', -0.0014340614869475955), ('std', 0.6908714578738936)]
-                    result = Math.pow(10, 3.1182027323125148 + 0.053166565938191204 + 0.9912122656981948 * Math.log10(budget) - 0.0014340614869475955 * (year) + skills);
+                    result = Math.pow(10, 3.1182027323125148 + 0.053166565938191204 + 0.9912122656981948 * Math.log10(budget) - 0.0014340614869475955 * (year) + skills*0.6908714578738936);
                     break;
                   case "3":
                     // Drama : [('Intercept', 3.1182027323125148), ('C(group)[T.1]', -0.019761094163595117), ('log_budget', 0.9912122656981948), ('Movie_release_date', -0.0014340614869475955), ('std', 0.6908714578738936)]                    result = Math.pow(10, 3.1182027323125148 + 0.053166565938191204 + 0.9912122656981948 * Math.log(budget) - 0.0014340614869475955 * (year) + skills);
-                    result = Math.pow(10, 3.1182027323125148 - 0.019761094163595117 + 0.9912122656981948 * Math.log10(budget) - 0.0014340614869475955 * (year) + skills);
+                    result = Math.pow(10, 3.1182027323125148 - 0.019761094163595117 + 0.9912122656981948 * Math.log10(budget) - 0.0014340614869475955 * (year) + skills*0.6908714578738936);
                     break;
                 }
                 break;
@@ -339,15 +604,15 @@
                 switch (percentage){
                   case "1":
                     // [('Intercept', -1.7342145832103117), ('log_budget', 1.0096628085135329), ('Movie_release_date', 0.0009491541436430425), ('std', 0.6629486477818738)]
-                    result = Math.pow(10, -1.7342145832103117 + 1.0096628085135329 * Math.log10(budget) + 0.0009491541436430425 * (year) + skills);
+                    result = Math.pow(10, -1.7342145832103117 + 1.0096628085135329 * Math.log10(budget) + 0.0009491541436430425 * (year) + skills*0.6629486477818738);
                     break;
                   case "2":
                     // [('Intercept', -1.7342145832103117), ('C(group)[T.2]', 0.03867724950279979), ('log_budget', 1.0096628085135329), ('Movie_release_date', 0.0009491541436430425), ('std', 0.6629486477818738)]
-                    result = Math.pow(10, -1.7342145832103117 + 0.03867724950279979 + 1.0096628085135329 * Math.log10(budget) + 0.0009491541436430425 * (year) + skills);
+                    result = Math.pow(10, -1.7342145832103117 + 0.03867724950279979 + 1.0096628085135329 * Math.log10(budget) + 0.0009491541436430425 * (year) + skills*0.6629486477818738);
                     break;
                   case "3":
                     // [('Intercept', -1.7342145832103117), ('C(group)[T.1]', -0.012870332679323821), ('log_budget', 1.0096628085135329), ('Movie_release_date', 0.0009491541436430425), ('std', 0.6629486477818738)]
-                    result = Math.pow(10, -1.7342145832103117 - 0.012870332679323821 + 1.0096628085135329 * Math.log10(budget) + 0.0009491541436430425 * (year) + skills);
+                    result = Math.pow(10, -1.7342145832103117 - 0.012870332679323821 + 1.0096628085135329 * Math.log10(budget) + 0.0009491541436430425 * (year) + skills*0.6629486477818738);
                     break;
                 }
                 break;
@@ -355,53 +620,53 @@
                 switch (percentage){
                   case "1":
                     // [('Intercept', 1.8834685216508527), ('log_budget', 0.8295815162867364), ('Movie_release_date', -0.00016709574218840372), ('std', 0.5921997286511802)]                    break;
-                    result = Math.pow(10, 1.8834685216508527 + 0.8295815162867364 * Math.log10(budget) - 0.00016709574218840372 * (year) + skills);
+                    result = Math.pow(10, 1.8834685216508527 + 0.8295815162867364 * Math.log10(budget) - 0.00016709574218840372 * (year) + skills*0.5921997286511802);
                     break;
                   case "2":
                     // [('Intercept', 1.8834685216508527), ('C(group)[T.2]', 0.038242931161974685), ('log_budget', 0.8295815162867364), ('Movie_release_date', -0.00016709574218840372), ('std', 0.5921997286511802)]                    break;
-                    result = Math.pow(10, 1.8834685216508527 + 0.038242931161974685 + 0.8295815162867364 * Math.log10(budget) - 0.00016709574218840372 * (year) + skills);
+                    result = Math.pow(10, 1.8834685216508527 + 0.038242931161974685 + 0.8295815162867364 * Math.log10(budget) - 0.00016709574218840372 * (year) + skills*0.5921997286511802);
                     break;
                   case "3":
                     // [('Intercept', 1.8834685216508527), ('C(group)[T.1]', 0.017096494542646834), ('log_budget', 0.8295815162867364), ('Movie_release_date', -0.00016709574218840372), ('std', 0.5921997286511802)]                    break;
-                    result = Math.pow(10, 1.8834685216508527 + 0.017096494542646834 + 0.8295815162867364 * Math.log10(budget) - 0.00016709574218840372 * (year) + skills);
+                    result = Math.pow(10, 1.8834685216508527 + 0.017096494542646834 + 0.8295815162867364 * Math.log10(budget) - 0.00016709574218840372 * (year) + skills*0.5921997286511802);
                     break;
                 }
               case "2": // Thriller
                 switch (percentage){
                   case "1":
                     // [('Intercept', 2.5490675134330765), ('log_budget', 1.2517929003328696), ('Movie_release_date', -0.0021526694508752584), ('std', 0.6282575477079226)]                    break;
-                    result = Math.pow(10, 2.5490675134330765 + 1.2517929003328696 * Math.log10(budget) - 0.0021526694508752584 * (year) + skills);
+                    result = Math.pow(10, 2.5490675134330765 + 1.2517929003328696 * Math.log10(budget) - 0.0021526694508752584 * (year) + skills*0.6282575477079226);
                     break;
                   case "2":
                     // [('Intercept', 2.5490675134330765), ('C(group)[T.2]', 0.07929507716666488), ('log_budget', 1.2517929003328696), ('Movie_release_date', -0.0021526694508752584), ('std', 0.6282575477079226)]                    break;
-                    result = Math.pow(10, 2.5490675134330765 + 0.07929507716666488 + 1.2517929003328696 * Math.log10(budget) - 0.0021526694508752584 * (year) + skills);
+                    result = Math.pow(10, 2.5490675134330765 + 0.07929507716666488 + 1.2517929003328696 * Math.log10(budget) - 0.0021526694508752584 * (year) + skills*0.6282575477079226);
                     break;
                   case "3":
                     // [('Intercept', 2.5490675134330765), ('C(group)[T.1]', 0.05172473755714463), ('log_budget', 1.2517929003328696), ('Movie_release_date', -0.0021526694508752584), ('std', 0.6282575477079226)]                    break;
-                    result = Math.pow(10, 2.5490675134330765 + 0.05172473755714463 + 1.2517929003328696 * Math.log10(budget) - 0.0021526694508752584 * (year) + skills);
+                    result = Math.pow(10, 2.5490675134330765 + 0.05172473755714463 + 1.2517929003328696 * Math.log10(budget) - 0.0021526694508752584 * (year) + skills*0.6282575477079226);
                     break;
                 }
               case "1": // Action
                 switch (percentage){
                   case "1":
                   // [('Intercept', 17.442985885017745), ('log_budget', 1.307874969039155), ('Movie_release_date', -0.009811363160076665), ('std', 0.6034346434974597)]                }
-                    result = Math.pow(10, 17.442985885017745 + 1.307874969039155 * Math.log10(budget) - 0.009811363160076665 * (year) + skills);
+                    result = Math.pow(10, 17.442985885017745 + 1.307874969039155 * Math.log10(budget) - 0.009811363160076665 * (year) + skills*0.6034346434974597);
                     break;
                   case "2":
                   // [('Intercept', 17.442985885017745), ('C(group)[T.2]', 0.06974758611003151), ('log_budget', 1.307874969039155), ('Movie_release_date', -0.009811363160076665), ('std', 0.6034346434974597)]                }
-                    result = Math.pow(10, 17.442985885017745 + 0.06974758611003151 + 1.307874969039155 * Math.log10(budget) - 0.009811363160076665 * (year) + skills);
+                    result = Math.pow(10, 17.442985885017745 + 0.06974758611003151 + 1.307874969039155 * Math.log10(budget) - 0.009811363160076665 * (year) + skills*0.6034346434974597);
                     break;
                   case "3":
                   // [('Intercept', 17.442985885017745), ('C(group)[T.1]', 0.08374425187495674), ('log_budget', 1.307874969039155), ('Movie_release_date', -0.009811363160076665), ('std', 0.6034346434974597)]                }
-                    result = Math.pow(10, 17.442985885017745 + 0.08374425187495674 + 1.307874969039155 * Math.log10(budget) - 0.009811363160076665 * (year) + skills);  
+                    result = Math.pow(10, 17.442985885017745 + 0.08374425187495674 + 1.307874969039155 * Math.log10(budget) - 0.009811363160076665 * (year) + skills*0.6034346434974597);  
                   break;
                 }
             }
 
             // Put the result into the div
-            result = Math.trunc(result)
+            result = (Math.trunc(result)/1000000).toFixed(1)
             // result.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-            document.getElementById("result").innerHTML = "<p>Result: "+result.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "'")+" $</p>";
+            document.getElementById("result").innerHTML = "<p>Predicted revenue: "+result.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "'")+" M$</p>";
           }
         </script>
         

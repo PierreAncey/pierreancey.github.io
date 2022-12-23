@@ -9,8 +9,10 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", serif;
   color: #444444;
+  line-height: 2;
+  font-size: 17px;
 }
 
 a {
