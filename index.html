@@ -325,12 +325,12 @@ However, since the dataset was extracted from English language Wikipedia, movies
              including the stepsisters.</span> <span class="purple"><span class="dark-rosa">Cinderella</span>'s grand entrance immediately attracts everyone's attention and intrigues the 
              <span class="dark-blue">Prince</span>.</span> … <i style="font-size: 30px;" class="bi bi-quote"></i>
           </span>
-          <p >
+          <p class="bspace75">
             Now that we know how it works for one movie summary, let's take a look at the positivity score over all movies.
           </p>
         </div>
-        <div class="row content align-items-center bspace75">
-            <img class="bspace100 img-fluid" src="assets/img/general_10people.jpeg"  alt="" width="200" >
+        <div class="row content align-items-center bspace25">
+            <img class="bspace100 img-fluid" src="assets/img/general.png"  alt="" width="200" >
         </div>
           <div class="row content align-items-center bspace100">
             <div class="col-lg-7 pt-4 pt-lg-0 text-justify align-middle ">
@@ -352,17 +352,17 @@ However, since the dataset was extracted from English language Wikipedia, movies
             </div>
           </div>
 
-            <p class="bspace75 text-justify">        
+            <p class="bspace100 text-justify">        
               Let's take a look at the stereotypical genres we saw earlier. Again, positive will be green, neutral gray and negative will be red. 
 Firstly, Romance films:
             </p>
-            <div class="row content align-items-center"><img class="img-fluid bspace25"src="assets/img/romance_10people.png"  alt=""  width="700"></div>
-            <p class="bspace50 text-justify">        
+            <div class="row content align-items-center bspace75"><img class="img-fluid bspace25"src="assets/img/romance.png"  alt=""  width="700"></div>
+            <p class="bspace100 text-justify">        
               The mentions of both genders in romance movies tend to be more positive (Male: 49.2% and Female: 53.4%), women still being described slightly more positively than men.
 Now we will a look at Action movies:
 
             </p>
-            <div class="row content align-items-center"><img class="img-fluid bspace100"src="assets/img/action_10people.png"  alt=""  width="850"></div>
+            <div class="row content align-items-center"><img class="img-fluid bspace100"src="assets/img/action.png"  alt=""  width="850"></div>
             <p class="bspace100 text-justify">
               We can see that Action movies have a much higher percentage of negative sentences for both genders (Male: 73.5% and Female: 56.5%)! Our suspicions are confirmed, movie genres contribute 
               a lot to the sentiment analysis outcomes. However, despite the percentages greatly shifted towards more positive or negative sentences for both genders depending on the movie genre, we observe
@@ -417,12 +417,14 @@ Now we will a look at Action movies:
               
               <div class="row content align-items-center bspace75">
                 <p class="text-justify">
-                  In an ideal world we would expect this result to show that words have about the same probability of being male or female but alas, we can conclude that we 
-                  really did not need to label the gender on the graphs. The movie genres are much more difficult to guess than the gender. The words in female sentences tend 
-                  to be connected with their relationships or reproduction, for instance “husband” or “pregnancy”, while the only words related to these topics in the male words 
-                  are buddy and ex-wife. We also find stereotypical words in the topics of fame or heroism for men, such as “reputation” and “champion”, while women are associated 
-                  with negatively stereotyped terms such as “molest”. In the female sentences the topic of wedding is very abundant, such as “bridesmaid”, “bridal” or “gown”. 
+                  In an ideal world we would expect this result to show that words have about the same probability of being male or female but alas, 
+                  we can conclude that we really did not need to label the gender on the graphs. The movie genres are much more difficult to guess than 
+                  the gender. The words in female sentences tend to be connected with their relationships or reproduction, for instance “husband” or “pregnancy”, 
+                  while the only words related to these topics in the male words are buddy and ex-wife. We also find stereotypical words in the topics of fame or heroism 
+                  for men, such as “reputation” and “champion”, while women are associated with negatively stereotyped terms such as “molest”. In the female sentences the topic 
+                  of wedding is very abundant, such as “bridesmaid”, “bridal” or “gown”. 
                   Overall, clichés we encounter in real life seem to be well established in movies as well!
+
 
                 </p>
               </div>
@@ -585,11 +587,11 @@ Now we will a look at Action movies:
            </div>
            <div class="col-auto">
             <p class="clean">Movie budget (in M$):</p>
-            <input class="form-control" type="text" inputmode="numeric" id="budget" step="1" placeholder="Budget" min=0 max=3000 value="0" onchange=enforceMinMax(this)>
+            <input class="form-control" type="text" inputmode="numeric" id="budget" step="1" placeholder="Budget" min=0 max=1000 value="0" onchange=enforceMinMax(this)>
            </div>
            <div class="col-auto">
             <p class="clean">Movie release year:</p>
-            <input class="form-control" type="text" inputmode="numeric" id="year" step="1" placeholder="Year" min=1700 max =2022 value="0" onchange=enforceMinMax(this)>
+            <input class="form-control" type="text" inputmode="numeric" id="year" step="1" placeholder="Year" min=1900 max=2023 value="0" onchange=enforceMinMax(this)>
            </div>
            <div class="col-auto">
             <p class="clean">Percentage of women:</p>
@@ -748,7 +750,7 @@ Now we will a look at Action movies:
             <div class="member align-items-start" data-aos="zoom-in" data-aos-delay="100">
               <div class="row">
                 <div class="col-lg-4 text-center align-self-center"><img src="assets/img/team/pierre.png" class="pic img-fluid"></div>
-                <div class="col-8 member-info ">
+                <div class="col-lg-8 member-info ">
                   <h4>Pierre Ancey</h4>
                   <span>Full-stack, Design & NLP</span>
                   <div class="team-texte">
@@ -771,7 +773,7 @@ Now we will a look at Action movies:
             <div class="member align-items-start" data-aos="zoom-in" data-aos-delay="200">
               <div class="row">
                 <div class="col-lg-4 text-center align-self-center"><img src="assets/img/team/bettina.png" class="pic" alt=""></div>
-                <div class="member-info col-8 ">
+                <div class="member-info col-lg-8 ">
                   <h4>Bettina Weber</h4>
                   <span>Story Teller & Visualization</span>
                   <div class="team-texte">
@@ -791,7 +793,7 @@ Now we will a look at Action movies:
             <div class="member align-items-start" data-aos="zoom-in" data-aos-delay="300">
               <div class="row">
                 <div class="col-lg-4 text-center align-self-center"><img src="assets/img/team/sam.png" class="pic" alt=""></div>
-                <div class="member-info col-8">
+                <div class="member-info col-lg-8">
                   <h4>Sam Jegou</h4>
                   <span>General Analyst</span>
                   <div class="team-texte">
@@ -811,7 +813,7 @@ Now we will a look at Action movies:
             <div class="member align-items-start" data-aos="zoom-in" data-aos-delay="400">
               <div class="row">
                 <div class="col-lg-4 text-center align-self-center"><img src="assets/img/team/alice.png" class="pic" alt=""></div>
-              <div class="member-info col-8 ">
+              <div class="member-info col-lg-8 ">
                 <h4>Alice</h4>
                 <span>Story Teller & Analyst</span>
                 <div class="team-texte">
