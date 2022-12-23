@@ -271,11 +271,12 @@ However, since the dataset was extracted from English language Wikipedia, movies
           <h4 class= "text-center bspace75"> We have seen that men and women are present in different numbers on screen, but how are they described ?            </h4>
           <div class="col-lg-6 pt-4 pt-lg-0 text-justify align-middle">
           <p>
-            First, we will look into the positivity of mentions in the movie summaries by performing a sentiment analysis. This works by finding the sentences that 
-            are associated with men or women and then counting the number of positive, negative or neutral words that are associated with them. Below you can see a
-            part of the movie summary of Cinderella with the male sentences highlighted in blue and the female sentences highlighted in pink. The words that are marked in blue/pink 
-            are the ones that were used to determine whether a sentence is male or female. If both are present the sentence is not taken into account. Before running the sentiment analysis,
-             the summaries were tokenized, the stopwords were removed and everything was lemmatized.
+            First, we will look into the positivity of mentions in the movie summaries by performing a sentiment analysis. This works by finding the sentences 
+            that are associated with men or women and then counting the number of positive, negative or neutral words that are associated with them. Below you 
+            can see a part of the movie summary of Cinderella with the male sentences highlighted in blue and the female sentences highlighted in pink. The words 
+            that are marked in blue/pink are the ones that were used to determine whether a sentence is male or female. These words include pronouns like “he” or 
+            “she” as well as the character names if they were available in the dataset. If both male and female markers are present the sentence is not taken into 
+            account. Before running the sentiment analysis, the summaries were tokenized, the stopwords were removed and everything was lemmatized.
           </p>
           </div>
           <div class="col-lg-6">
@@ -386,9 +387,9 @@ Now we will a look at Action movies:
               <div class="row content align-items-center bspace50">
                 <h4 class="text-center bspace50">Comparison of Most Predictive Words for each Gender
                 </h4>
-                <p class="text-justify">Below you can see the words that appear in movie descriptions with the highest probability of being associated with male gender in
-                   blue and the same for female words in pink. We have added the results for Romance and Action movies as well as one more genre present in the top 5 most 
-                   represented genres in the dataset, which we assumed would be less stereotypical: Comedy.</p>
+                <p class="text-justify">Below you can see the words that appear in movie descriptions with the highest probability of being associated with male gender in blue and 
+                  the same for female words in pink. We have added the results for Romance and Action movies as well as one more genre present in the top 5 most represented genres in the dataset, 
+                  which we assumed would be less stereotypical: Comedy.</p>
               </div>
 
               <div class="row content align-items-center bspace75">
@@ -416,9 +417,13 @@ Now we will a look at Action movies:
               
               <div class="row content align-items-center bspace75">
                 <p class="text-justify">
-                  In an ideal world we would expect this result to show that words have about the same probability of being male or female but alas, we can conclude that 
-                  we really didn't need to label the gender on the graphs. The genres are much more difficult to guess than the gender. The words in female sentences tend 
-                  to be connected with their relationships or reproduction. while the only words related to these topics in the male words are buddy and ex-wife.
+                  In an ideal world we would expect this result to show that words have about the same probability of being male or female but alas, we can conclude that we 
+                  really did not need to label the gender on the graphs. The movie genres are much more difficult to guess than the gender. The words in female sentences tend 
+                  to be connected with their relationships or reproduction, for instance “husband” or “pregnancy”, while the only words related to these topics in the male words 
+                  are buddy and ex-wife. We also find stereotypical words in the topics of fame or heroism for men, such as “reputation” and “champion”, while women are associated 
+                  with negatively stereotyped terms such as “molest”. In the female sentences the topic of wedding is very abundant, such as “bridesmaid”, “bridal” or “gown”. 
+                  Overall, clichés we encounter in real life seem to be well established in movies as well!
+
                 </p>
               </div>
 
@@ -597,7 +602,7 @@ Now we will a look at Action movies:
            </div>
            <div class="col-auto">
             <p class="clean">Skills:</p>
-            <input id="skills" class="form-control" type="text" inputmode="numeric" id="skills" placeholder="Skill level" min=-1 max=1, value="0" onchange=enforceMinMax(this)>
+            <input id="skills" class="form-control" type="text" inputmode="numeric" id="skills" placeholder="Skill level" min="-1" max="1" value="0" onchange=enforceMinMax(this)>
            </div>
         </div>
 
