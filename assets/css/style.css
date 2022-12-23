@@ -581,6 +581,9 @@ hr {
 .section-bg {
   background-color: #f3f5fa;
 }
+.section-white {
+  background-color: #ffffff;
+}
 
 .section-title {
   text-align: center;
