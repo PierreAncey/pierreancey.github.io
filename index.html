@@ -150,9 +150,13 @@
               font-weight: bold;
               color: red;
             }
+            .yes{
+              font-size: 30px !important;
+              font-weight: bold;
+            }
 
           </style>
-          <div class="col-lg-5">
+          <div class="col-lg-5 col align-self-end">
             <div class="justify-content-center box text-justify">
               <h4 class="text-center bspace10">What is the CMU Movie Summary Corpus?</h4>
               <p> The CMU Movie Summary Corpus consists of 42,306 movie plot summaries extracted from the November 2, 2012, dump of English-language Wikipedia. 
@@ -189,21 +193,22 @@
     <section id="graphs" class="nlp section-bg">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h2>There is more !</h2>
+          <h2>Wait, there is more !</h2>
         </div>
 
         <!-- <div id="divPage"><center><iframe src ="assets/test.html" height = "500", width ="1000" frameBorder="0"></iframe></center></div> -->
         
         
-        <div class="row content align-items-center">
+        <div class="row content align-items-center bspace75">
           <h3 class="text-center bspace50">From Gender Gap to Age Gap</h3>
-          <p class="text-center">We've all seen movie couples that have huge age gaps in the people portraying them. But are women also younger overall? </p>
+          <p class="text-center bspace25">We have all seen movie couples that have huge age gaps in the people portraying them. But are women also younger overall? </p>
 
           <!-- <div class="row bspace50"></div> -->
           <div class="col-lg-9 pt-4 pt-lg-0 text-justify">
             <img src="assets/img/actors_age_over_time.png" class="img-fluid" alt="">
           </div>
           <div class="col">
+            <p class="text-center yes bspace25">Yes !</p>
             <p class="text-justify">
             On average women are about 25 whereas men are closer to 35. As can be seen in the graph above women are consistently about 10 years younger than men over the timespan of the data. 
           </p>         
@@ -213,7 +218,7 @@
 
         </div>
 
-        <div class="row text-justify align-items-center text-center justify-content-center">
+        <div class="row text-justify align-items-center text-center justify-content-center bspace100">
           <div class="col-5">
             <div class="row box">
               <div class="col-7">
@@ -230,23 +235,26 @@
             </div>
         </div>
 
-        <div class="row content align-items-center">
-          <div class="col-lg-6 pt-4 pt-lg-0 text-justify align-middle">
-          <h3> Romance Films for Women, Action Movies for Men</h3>
+        <div class="row content align-items-center bspace75">
+          <h3 class="bspace50 text-center"> Romance Films for Women, Action Movies for Men</h3>
+          <div class="col-lg-5 pt-4 pt-lg-0 text-justify align-middle ">
           <p>
-          Here we can see that women make up the minority of characters across the genres that have more than 800 actors in them. 
-          Most interestingly, of the five most represented genres in our dataset: Drama, Comedy, Romance Film, Thriller and Action women make up more than 40% of the cast in only one: Romance (43.1%). 
-          Notice that the fraction of women is much higher in movies that are traditionally targeted at women (like Romance Films) in general when compared to more traditionally masculine genres like 
-          Action Movies where the fraction of women is a measly 25.5%.
+            Here we can see that women make up the minority of characters across the genres that have more than 800 actors in them. Most interestingly, 
+            of the five most represented genres in our dataset: Drama, Comedy, Romance Film, Thriller and Action women make up more than 40% of the cast 
+            in only one: Romance (43.1%). Notice that the fraction of women is much higher in movies that are traditionally targeted at women (like Romance Films) 
+            in general when compared to more traditionally masculine genres like Action Movies where the fraction of women is a measly 25.5%.
           </p>
           </div>
-          <div class="col">
-            <img src="assets/img/female_actors_movie_genres.png"  alt="" class="img-fluid">
+          <div class="col-7">
+            <img src="assets/img/female_actors_movie_genres.png"  alt=""  width="850">
           </div>
+        </div>
+
+        <div class="row content align-items-center bspace100">
 
           <div class="row content align-items-center">
+            <h3 class= "text-center bspace50"> We have seen that men and women are present in different numbers on screen, but what about how they are portrayed?            </h3>
             <div class="col-lg-6 pt-4 pt-lg-0 text-justify align-middle">
-            <h3> We've seen that men and women are present in different numbers on screen, but what about how they are portrayed?            </h3>
             <p>
               First let's dive into positivity of mentions in the movie summaries. This works by finding the sentences that are associated with men or women and then counting the number of positive, 
               negative or neutral words that are associated with them. Below you can see an example of a movie summary with the male sentences highlighted in blue and the female sentences highlighted 
