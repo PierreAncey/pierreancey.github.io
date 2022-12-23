@@ -11,8 +11,34 @@
 body {
   font-family: "Open Sans", serif;
   color: #444444;
-  line-height: 2;
+  line-height: 2.2;
   font-size: 19px;
+}
+
+.bspace100{
+  margin-bottom: 100px;
+}
+
+.bspace75{
+  margin-bottom: 75px;
+}
+
+.bspace50{
+  margin-bottom: 50px;
+}
+
+.bspace25{
+  margin-bottom: 25px;
+}
+
+.bspace10{
+  margin-bottom: 10px;
+}
+
+h4{
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
 a {
@@ -178,7 +204,7 @@ h6 {
   align-items: center;
   justify-content: space-between;
   padding: 10px 0 10px 30px;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 500;
   color: #fff;
   white-space: nowrap;
@@ -399,9 +425,9 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   /* background: #6dca71; */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/feminism.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1.0)), url("../img/title.jpg");
 }
 
 #hero .container {
@@ -410,11 +436,11 @@ h6 {
 
 #hero h1 {
   margin: 0 0 10px 0;
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 700;
   line-height: 56px;
   color: #fff;
-  line-height: 1.4;
+  line-height: 1.6;
 
   text-shadow: 0 0 5px black, 0 0 5px black, 0 0 5px black, 0 0 5px black;
 }
@@ -562,7 +588,7 @@ hr {
 }
 
 .section-title h2 {
-  font-size: 32px;
+  font-size: 38px;
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -671,6 +697,7 @@ hr {
     max-width: 40%;
   }
 }
+
 
 
 /*--------------------------------------------------------------

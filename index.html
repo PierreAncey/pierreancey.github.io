@@ -67,7 +67,8 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-          <h1>Analysis of the Difference in Representation Based on Gender in Movies</h1>
+          <h1 class="text-center title-font"><span class="title-rosa">Mov</span><span class="title-blue">Equality</span></h1>
+          <h1 class="text-justify">Analysis of the Difference in Representation Based on Gender in Movies</h1>
 
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
@@ -88,13 +89,13 @@
           <h2>Introduction</h2>
         </div>
 
-        <div class="row content">
+        <div class="row content bspace75">
             <p class="text-justify">
-              Nowadays it's hard to imagine our lives without movies. They have the ability to portray a snapshot of reality and show it to people that could never have seen it otherwise. 
+              Nowadays it is hard to imagine our lives without movies. They have the ability to portray a snapshot of reality and show it to people that could never have seen it otherwise. 
               However, within their realities, movies are often criticized for not accurately representing the population. For example, historically, it is often said that women are vastly underrepresented. 
               The goal of this project is to look at gender diversity in movies over time and see how it influences a movie's success using the CMU Movie Summary Corpus. 
               
-              Not a data scientist? Don't worry! We've added some purple boxes with explanations along the way to help you out.
+              Not a data scientist? Do not worry! We've added some purple boxes with explanations along the way to help you out.
               
             <!-- The next step would be to analyze how people are represented. 
             This would be done using sentiment analysis on the mentions of characters in the plot summary to see whether specific groups are portrayed in a more positive/negative light than others. 
@@ -110,10 +111,11 @@
               <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
             </ul> -->
         </div>
-        <div class="row content pt-5">
-          <div class="col-lg-6 pt-4 pt-lg-0 text-justify">
-            <p>
-              How many Female Characters are There?
+        <div class="row content pt-5 bspace75 align-items-center">
+          <div class="col-lg-7 align-items-center">
+            <h4 class="text-center bspace25">How many Female Characters are There?</h4>
+            <p class"text-justify">
+              
               The average fraction of women in the over 40'000 movies in the CMU Movie Summary Corpus is 39%. That sounds very close to 50% right?
               However, since the dataset was extracted from English language Wikipedia and English language movies logically make up the majority of 
               them we took a look at that number in only the English language movies. We have only 33% of female actors in that group! 
@@ -131,11 +133,22 @@
               text-align: justify;
               text-justify: inter-word;
             }
+            .title-rosa{
+              color: #ff3e8f;
+            }
+            .title-blue{
+              color: #55aafd;
+            }
+            .title-font{
+              font-size: 60px !important;
+            }
+
+            
       
           </style>
-          <div class="col-lg-6">
+          <div class="col-lg-5">
             <div class="justify-content-center box text-justify">
-              <h5 class="text-center">What is the CMU Movie Summary Corpus?</h5>
+              <h4 class="text-center bspace10">What is the CMU Movie Summary Corpus?</h4>
               <p> The CMU Movie Summary Corpus consists of 42,306 movie plot summaries extracted from the November 2, 2012, dump of English-language Wikipedia. 
                 It was then coupled with data from the November 4, 2012, dump of Freebase to add metadata on the movie and information on the actors.</p>
                 <hr>
@@ -150,6 +163,18 @@
 
         </div>
 
+        <div class="row content align-items-center">
+          <div class="col-lg-4 pt-4 pt-lg-0 align-middle">
+            <h4 class="text-center">That's just because of old movies right?</h4>
+            <div class="row bspace25 text-justify"></div>
+              <p class="text-center wrong">Wrong!</h5>
+              <p class="text-justify">As can be seen in the graph below the fraction of women has been relatively constant over the years, only climbing above 50% during WWII. </p>
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 text-justify"">
+            <img src="assets/img/Female_actors_over_time.png" class="img-fluid" width="120%" alt="">
+          </div>
+      </div>
+
       </div>
     </section><!-- End Introduction Section -->
 
@@ -159,6 +184,11 @@
       .text-center{
         text-align: center;
       }
+      .wrong{
+        font-size: 25;
+        font-weight: bold;
+        bold
+      }
     </style>
     <section id="graphs" class="nlp section-bg">
       <div class="container" data-aos="fade-up">
@@ -167,16 +197,7 @@
         </div>
 
         <!-- <div id="divPage"><center><iframe src ="assets/test.html" height = "500", width ="1000" frameBorder="0"></iframe></center></div> -->
-        <div class="row content align-items-center">
-            <div class="col-lg-6 pt-4 pt-lg-0 text-justify align-middle">
-              <h4>That's just because of old movies right?</h4>
-              <div class="row bspace25"></div>
-                <b>Wrong!</b> As can be seen in the graph below the fraction of women has been relatively constant over the years, only climbing above 50% during WWII. 
-            </div>
-            <div class="col">
-              <img src="assets/img/Female_actors_over_time.png" class="img-fluid" alt="">
-            </div>
-        </div>
+        
 
         <div class="row bspace100"></div>
         <div class="row bspace50"></div>
@@ -320,36 +341,20 @@
         </div>
 
         <style>
-          #containerworldTime {
-    height: 700px;
-    margin:auto;
-    overflow: hidden;
-    width: 395px;
+          .iframe-rwd  {
+position: relative;
+padding-bottom: 65.25%;
+padding-top: 30px;
+height: 0;
+overflow: hidden;
 }
-#containerworldTime iframe {
-    border: 0 solid;
-    height: 1103px;
-    margin-left: -110px;
-    margin-top: -385px;
-    width: 979px;
-    -webkit-transform:scale(0.8);
-    -moz-transform:scale(0.8);
-    -o-transform:scale(0.8);
-    -ms-transform:scale(0.8);
-}    
-    /* Create a class for bottom padding */
-    .bspace100{
-      margin-bottom: 100px;
-    }
-    .bspace50{
-      margin-bottom: 50px;
-    }
-    .bspace25{
-      margin-bottom: 25px;
-    }
-    .bspace10{
-      margin-bottom: 10px;
-    }
+.iframe-rwd iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
         </style>
 
 
@@ -361,7 +366,7 @@
           </p>
         </div>
           <div class="col">
-            <div id="divPage"><center><iframe src ="assets/img/words/Action_most_feminine_words.html" height = "400", width ="300" scrolling="no" frameborder="0" ></iframe></center></div>
+            <div id="divPage" class="ifram-rwd"><center><iframe src ="assets/img/words/Action_most_feminine_words.html" height = "400", width ="250" scrolling="no" frameborder="0"></iframe></center></div>
           </div>
         </div>
       </div>
