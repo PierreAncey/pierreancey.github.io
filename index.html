@@ -219,9 +219,9 @@
         </div>
 
         <div class="row text-justify align-items-center text-center justify-content-center bspace100">
-          <div class="col-5">
+          <div class="col-lg-5">
             <div class="row box">
-              <div class="col-7">
+              <div class="col-lg-7">
                 <h5 class="text-center">Is this surprising, George ?</h5>
             <p>  Take a minute to gather all the most attractive men and women you can think of. In general, men were much older, weren't they ?</p>
             
@@ -245,7 +245,7 @@
             in general when compared to more traditionally masculine genres like Action Movies where the fraction of women is a measly 25.5%.
           </p>
           </div>
-          <div class="col-7">
+          <div class="col-lg-7">
             <img src="assets/img/female_actors_movie_genres.png"  alt="" class="img-fluid"  width="850">
           </div>
         </div>
@@ -336,43 +336,81 @@
             <div class="col-4">
               <div class="box text-justify">
                 <h5 class="text-center">What's a confounder ?</h5>
-                <p>  A confounder or confounding variable is a variable that influences both the variable that we are predicting and the variable that we are using to predict it. 
+                <p >  A confounder or confounding variable is a variable that influences both the variable that we are predicting and the variable that we are using to predict it. 
                   </p>
                   <hr>
             </div>
             </div>
           </div>
 
-            <p class="bspace75">        
+            <p class="bspace75 text-justify">        
               Let's take a look at the stereotypical genres we saw earlier. Again, positive will be green, neutral gray and negative will be red. 
               Firstly, Romance:
             </p>
             <div class="row content align-items-center"><img class="bspace25"src="assets/img/romance_10people.png"  alt=""  width="850"></div>
-            <p class="bspace50">        
+            <p class="bspace50 text-justify">        
               The mentions of both genders in romance movies tend to be more positive (Male: 49.2% and Female: 53.4%).
               Now we will a look at action movies:
 
             </p>
             <div class="row content align-items-center"><img class="bspace100"src="assets/img/action_10people.png"  alt=""  width="850"></div>
-            <p class="bspace100">
+            <p class="bspace100 text-justify">
               We can see that action movies have a much higher percentage of negative sentences for both genders Male: 73.5% and Female: 56.5%)! Our suspicions are confirmed. 
             </p>
 
-            <h4 class="text-center bspace50">Positivity depends on the genre, but what are the descriptions saying about men and women?
+            <h4 class="text-center bspace75">Positivity depends on the genre, but what are the descriptions saying about men and women?
             </h4>
 
             <div class="row content align-items-center bspace100">
-              <div class="col-lg-6 pt-4 pt-lg-0 text-justify align-middle ">
+              <div class="col-lg-6 pt-4 pt-lg-0 text-justify align-middle text-center">
                 <img src="assets/img/fs.png" class="img-fluid" alt="">
               </div>
-              <div class="col-lg-6 pt-4 pt-lg-0 text-justify align-middle ">
+              <div class="col-lg-6 pt-4 pt-lg-0 text-justify align-middle text-center">
                 <img src="assets/img/ms.png" class="img-fluid" alt="">
               </div>
             </div>
 
-            <p class="text-justify">As we can see in the figures above the words “find”, “kill”, “go”, “take” and “tell” are the most popular no matter 
+            <p class="text-justify bspace75">As we can see in the figures above the words “find”, “kill”, “go”, “take” and “tell” are the most popular no matter 
               the gender they describe. Aside from that, we can see some differences but are they predictive of the gender?</p>
-            
+
+              <div class="row content align-items-center bspace50">
+                <h4 class="text-center bspace50">Comparison of Most Predictive Words for each Gender
+                </h4>
+                <p class="text-justify">Below you can see the words that appear in movie descriptions with a the highest probability of being male on the left and the same for female sentences on the right. 
+                  We have added the results for romance and action movies as well as one more genre in the top 5 which we assumed would be less stereotypical: Comedy.</p>
+              </div>
+
+              <div class="row content align-items-center bspace75">
+                <div class="col-lg-4 pt-4 pt-lg-0 text-justify align-middle text-center">
+                  <img src="assets/img/words/Action_most_feminine_words.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-4 pt-4 pt-lg-0 text-justify align-middle text-center">
+                  <img src="assets/img/words/Comedy_most_feminine_words.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-4 pt-4 pt-lg-0 text-justify align-middle text-center">
+                  <img src="assets/img/words/Romance_most_feminine_words.png" class="img-fluid" alt="">
+                </div>
+              </div>
+              <div class="row content align-items-center bspace75">
+                <div class="col-lg-4 pt-4 pt-lg-0 text-justify align-middle text-center">
+                  <img src="assets/img/words/Action_most_masculine_words.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-4 pt-4 pt-lg-0 text-justify align-middle text-center">
+                  <img src="assets/img/words/Comedy_most_masculine_words.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-4 pt-4 pt-lg-0 text-justify align-middle text-center">
+                  <img src="assets/img/words/Romance_most_masculine_words.png" class="img-fluid" alt="">
+                </div>
+              </div>
+              
+              <div class="row content align-items-center bspace75">
+                <p class="text-justify">
+                  In an ideal world we would expect this result to show that words have about the same probability of being male or female but alas, we can conclude that 
+                  we really didn't need to label the gender on the graphs. The genres are much more difficult to guess than the gender. The words in female sentences tend 
+                  to be connected with their relationships or reproduction. while the only words related to these topics in the male words are buddy and ex-wife.
+                </p>
+              </div>
+
 
 
         </div>
@@ -494,6 +532,10 @@ height: 100%;
             Finally, as you may know there is a high variance in the revenue of films, which we will interpret as the consequence of the skills of your team (director, actors, …). You can evaluate your production teams skills by a score between -1 and 1.            
           </p>
         </div>
+      </div>
+
+      <div class="row">
+        <h3></h3>
       </div>
     </section>
 
