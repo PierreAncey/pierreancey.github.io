@@ -230,7 +230,13 @@
 
     <section id="regression" class="section-white-bg">
       <style>
-        #budget, #year, #predict-button, #result {
+        #budget, #year, #predict-button, #result, #skills, #percentage, #mtype {
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+          text-align: center;
+        }
+        .clean{
           margin-left: auto;
           margin-right: auto;
           display: block;
@@ -244,18 +250,43 @@
       <div class="container" data-aos="fade-up">
         <div class="section-title">
           <h2>Regression</h2>
-          <p>Revenue regression result:</p>
+          <!-- <p>Revenue regression result:</p> -->
         </div>
 
         <!-- Inputs -->
         <div class="row justify-content-around regression">
            <!-- Create an input element for the user to enter an integer value -->
            <div class="col-auto">
-        
-            <input class="form-control" type="text" inputmode="numeric" id="budget" placeholder="Budget" min=0 max=300000000, value="0">
+            <p class="clean">Movie type:</p>
+            <select class="form-select form-select-md mb-3" aria-label=".form-select-lg example" id="mtype">
+              <!-- <option selected value="1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMovie type&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</option> -->
+              <option selected value="1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAction&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</option>
+              <option value="2">Thriller</option>
+              <option value="3">Romance</option>
+              <option value="4">Comedy</option>
+              <option value="5">Drama</option>
+            </select>
            </div>
            <div class="col-auto">
-            <input class="form-control" type="text" inputmode="numeric" id="year" placeholder="Year" min=0, value="1800">
+            <p class="clean">Movie budget:</p>
+            <input class="form-control" type="text" inputmode="numeric" id="budget" step="1" placeholder="Budget" min=0 max=300000000 value="0">
+           </div>
+           <div class="col-auto">
+            <p class="clean">Movie release year:</p>
+            <input class="form-control" type="text" inputmode="numeric" id="year" step="1" placeholder="Year" min=1700 max =2021 value="0">
+           </div>
+           <div class="col-auto">
+            <p class="clean">Percentage of women:</p>
+            <select class="form-select form-select-md mb-3" aria-label=".form-select-lg example" id="percentage">
+              <!-- <option selected value="1">&nbsp&nbsp&nbspPercentage of women&nbsp&nbsp&nbsp</option> -->
+              <option selected value="1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspLow&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</option>
+              <option value="2">Medium</option>
+              <option value="3">High</option>
+            </select>
+           </div>
+           <div class="col-auto">
+            <p class="clean">Skills:</p>
+            <input id="skills" class="form-control" type="text" inputmode="numeric" id="budget" placeholder="Budget" min=-1 max=1, value="0">
            </div>
         </div>
 
@@ -276,14 +307,101 @@
         <script>
           function predictRevenue() {
             // Get the value of the input elements
+            var mtype = document.getElementById('mtype').value;
             var budget = document.getElementById("budget").value;
             var year = document.getElementById("year").value;
+            var percentage = document.getElementById('percentage').value;
+            var skills = document.getElementById("skills").value;
 
-            // Make a prediction using the model
-            var prediction = budget*year
+            // alert(percentage)
+
+            var result = 0;
+            switch (mtype) {
+              case "5": // Drama
+              alert(mtype)
+                switch (percentage){
+                  case "1":
+                    // [('Intercept', 3.1182027323125148), ('log_budget', 0.9912122656981948), ('Movie_release_date', -0.0014340614869475955), ('std', 0.6908714578738936)]
+                    result = Math.pow(10, 3.1182027323125148 + 0.9912122656981948 * Math.log10(budget) - 0.0014340614869475955 * (year) + skills);
+                    alert("Test")
+                    break;
+                  case "2":
+                    // [('Intercept', 3.1182027323125148), ('C(group)[T.2]', 0.053166565938191204), ('log_budget', 0.9912122656981948), ('Movie_release_date', -0.0014340614869475955), ('std', 0.6908714578738936)]
+                    result = Math.pow(10, 3.1182027323125148 + 0.053166565938191204 + 0.9912122656981948 * Math.log10(budget) - 0.0014340614869475955 * (year) + skills);
+                    break;
+                  case "3":
+                    // Drama : [('Intercept', 3.1182027323125148), ('C(group)[T.1]', -0.019761094163595117), ('log_budget', 0.9912122656981948), ('Movie_release_date', -0.0014340614869475955), ('std', 0.6908714578738936)]                    result = Math.pow(10, 3.1182027323125148 + 0.053166565938191204 + 0.9912122656981948 * Math.log(budget) - 0.0014340614869475955 * (year) + skills);
+                    result = Math.pow(10, 3.1182027323125148 - 0.019761094163595117 + 0.9912122656981948 * Math.log10(budget) - 0.0014340614869475955 * (year) + skills);
+                    break;
+                }
+                break;
+              case "4": // Comedy
+                switch (percentage){
+                  case "1":
+                    // [('Intercept', -1.7342145832103117), ('log_budget', 1.0096628085135329), ('Movie_release_date', 0.0009491541436430425), ('std', 0.6629486477818738)]
+                    result = Math.pow(10, -1.7342145832103117 + 1.0096628085135329 * Math.log10(budget) + 0.0009491541436430425 * (year) + skills);
+                    break;
+                  case "2":
+                    // [('Intercept', -1.7342145832103117), ('C(group)[T.2]', 0.03867724950279979), ('log_budget', 1.0096628085135329), ('Movie_release_date', 0.0009491541436430425), ('std', 0.6629486477818738)]
+                    result = Math.pow(10, -1.7342145832103117 + 0.03867724950279979 + 1.0096628085135329 * Math.log10(budget) + 0.0009491541436430425 * (year) + skills);
+                    break;
+                  case "3":
+                    // [('Intercept', -1.7342145832103117), ('C(group)[T.1]', -0.012870332679323821), ('log_budget', 1.0096628085135329), ('Movie_release_date', 0.0009491541436430425), ('std', 0.6629486477818738)]
+                    result = Math.pow(10, -1.7342145832103117 - 0.012870332679323821 + 1.0096628085135329 * Math.log10(budget) + 0.0009491541436430425 * (year) + skills);
+                    break;
+                }
+                break;
+              case "3": // Romance
+                switch (percentage){
+                  case "1":
+                    // [('Intercept', 1.8834685216508527), ('log_budget', 0.8295815162867364), ('Movie_release_date', -0.00016709574218840372), ('std', 0.5921997286511802)]                    break;
+                    result = Math.pow(10, 1.8834685216508527 + 0.8295815162867364 * Math.log10(budget) - 0.00016709574218840372 * (year) + skills);
+                    break;
+                  case "2":
+                    // [('Intercept', 1.8834685216508527), ('C(group)[T.2]', 0.038242931161974685), ('log_budget', 0.8295815162867364), ('Movie_release_date', -0.00016709574218840372), ('std', 0.5921997286511802)]                    break;
+                    result = Math.pow(10, 1.8834685216508527 + 0.038242931161974685 + 0.8295815162867364 * Math.log10(budget) - 0.00016709574218840372 * (year) + skills);
+                    break;
+                  case "3":
+                    // [('Intercept', 1.8834685216508527), ('C(group)[T.1]', 0.017096494542646834), ('log_budget', 0.8295815162867364), ('Movie_release_date', -0.00016709574218840372), ('std', 0.5921997286511802)]                    break;
+                    result = Math.pow(10, 1.8834685216508527 + 0.017096494542646834 + 0.8295815162867364 * Math.log10(budget) - 0.00016709574218840372 * (year) + skills);
+                    break;
+                }
+              case "2": // Thriller
+                switch (percentage){
+                  case "1":
+                    // [('Intercept', 2.5490675134330765), ('log_budget', 1.2517929003328696), ('Movie_release_date', -0.0021526694508752584), ('std', 0.6282575477079226)]                    break;
+                    result = Math.pow(10, 2.5490675134330765 + 1.2517929003328696 * Math.log10(budget) - 0.0021526694508752584 * (year) + skills);
+                    break;
+                  case "2":
+                    // [('Intercept', 2.5490675134330765), ('C(group)[T.2]', 0.07929507716666488), ('log_budget', 1.2517929003328696), ('Movie_release_date', -0.0021526694508752584), ('std', 0.6282575477079226)]                    break;
+                    result = Math.pow(10, 2.5490675134330765 + 0.07929507716666488 + 1.2517929003328696 * Math.log10(budget) - 0.0021526694508752584 * (year) + skills);
+                    break;
+                  case "3":
+                    // [('Intercept', 2.5490675134330765), ('C(group)[T.1]', 0.05172473755714463), ('log_budget', 1.2517929003328696), ('Movie_release_date', -0.0021526694508752584), ('std', 0.6282575477079226)]                    break;
+                    result = Math.pow(10, 2.5490675134330765 + 0.05172473755714463 + 1.2517929003328696 * Math.log10(budget) - 0.0021526694508752584 * (year) + skills);
+                    break;
+                }
+              case "1": // Action
+                switch (percentage){
+                  case "1":
+                  // [('Intercept', 17.442985885017745), ('log_budget', 1.307874969039155), ('Movie_release_date', -0.009811363160076665), ('std', 0.6034346434974597)]                }
+                    result = Math.pow(10, 17.442985885017745 + 1.307874969039155 * Math.log10(budget) - 0.009811363160076665 * (year) + skills);
+                    break;
+                  case "2":
+                  // [('Intercept', 17.442985885017745), ('C(group)[T.2]', 0.06974758611003151), ('log_budget', 1.307874969039155), ('Movie_release_date', -0.009811363160076665), ('std', 0.6034346434974597)]                }
+                    result = Math.pow(10, 17.442985885017745 + 0.06974758611003151 + 1.307874969039155 * Math.log10(budget) - 0.009811363160076665 * (year) + skills);
+                    break;
+                  case "3":
+                  // [('Intercept', 17.442985885017745), ('C(group)[T.1]', 0.08374425187495674), ('log_budget', 1.307874969039155), ('Movie_release_date', -0.009811363160076665), ('std', 0.6034346434974597)]                }
+                    result = Math.pow(10, 17.442985885017745 + 0.08374425187495674 + 1.307874969039155 * Math.log10(budget) - 0.009811363160076665 * (year) + skills);  
+                  break;
+                }
+            }
 
             // Put the result into the div
-            document.getElementById("result").innerHTML = "<p>Result: "+prediction+"</p>";
+            result = Math.trunc(result)
+            // result.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+            document.getElementById("result").innerHTML = "<p>Result: "+result.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "'")+"</p>";
           }
         </script>
         
@@ -386,10 +504,8 @@
                   <p>Life Science Engineering | Life Sciences department&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
                 </div>
                 <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                  <a href="https://www.linkedin.com/in/alice-klein-958ba3254" target="_blank" rel="noopener noreferrer"> <i class="ri-linkedin-box-fill"></i> </a>
+                  <a href="mailto: alice.klein@epfl.ch"><i class="bi bi-envelope-fill"></i></a>
                 </div>
               </div>
               </div>
