@@ -222,7 +222,7 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: hsl(305, 68%, 62%);
+  color: hwb(308 1% 49%);
 }
 
 .navbar .getstarted,
@@ -232,7 +232,7 @@ h6 {
   border-radius: 50px;
   color: #fff;
   font-size: 14px;
-  border: 2px solid hsl(305, 68%, 62%);
+  border: 2px solid hwb(308 1% 49%);
   font-weight: 600;
 }
 
