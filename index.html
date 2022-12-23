@@ -269,7 +269,7 @@ However, since the dataset was extracted from English language Wikipedia, movies
 
         <div class="row content align-items-center bspace75">
           <h4 class= "text-center bspace75"> We have seen that men and women are present in different numbers on screen, but how are they described ?            </h4>
-          <div class="col-lg-6 pt-4 pt-lg-0 text-justify align-middle">
+          <div class="col-lg-8 pt-4 pt-lg-0 text-justify align-middle">
           <p>
             First, we will look into the positivity of mentions in the movie summaries by performing a sentiment analysis. This works by finding the sentences 
             that are associated with men or women and then counting the number of positive, negative or neutral words that are associated with them. Below you 
@@ -279,9 +279,9 @@ However, since the dataset was extracted from English language Wikipedia, movies
             account. Before running the sentiment analysis, the summaries were tokenized, the stopwords were removed and everything was lemmatized.
           </p>
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-4">
             <div class="box text-justify">
-                <h5 class="text-center">What are Tokenization,  Stopword Removal and  Lemmatization?</h5>
+                <h5 class="text-center">What are Tokenization,  Stopword Removal and  Lemmatization ?</h5>
                 <p>  When a text is tokenized it is split into individual tokens (≈words). 
                   In stopword removal all of the small words that do not add much information like “is” or “a” are removed.
                   Lemmatization maps different versions of the same normalized words. For example, talking and talked would both become talk.
@@ -325,16 +325,31 @@ However, since the dataset was extracted from English language Wikipedia, movies
              including the stepsisters.</span> <span class="purple"><span class="dark-rosa">Cinderella</span>'s grand entrance immediately attracts everyone's attention and intrigues the 
              <span class="dark-blue">Prince</span>.</span> … <i style="font-size: 30px;" class="bi bi-quote"></i>
           </span>
-          <p class="bspace75">
-            Now that we know how it works for one movie summary, let's take a look at the positivity score over all movies.
-          </p>
+          <div class="row content align-items-center bspace25">
+              <p class="text-justify">
+                Now that we know how it works for one movie summary, let's take a look at the positivity score over all movies.
+              </p>
+          </div>
+        </div>
+        <div class="row content align-items-center bspace75">
+          <div class="col-lg-4"></div>
+          <div class="col-lg-4">
+          <div class="box text-justify">
+            <h5 class="text-center">What makes a sentence positive ?</h5>
+            <p class="text-justify">To determine the positivity of a sentence the words that are in that sentence are compared to standard 
+              lists of positive and negative words. The library Vader does this automatically.
+              </p>
+              <hr>
+          </div>
+        </div>
+          <div class="col-lg-4"></div>
         </div>
         <div class="row content align-items-center bspace25">
             <img class="bspace100 img-fluid" src="assets/img/general.png"  alt="" width="200" >
         </div>
           <div class="row content align-items-center bspace100">
             <div class="col-lg-7 pt-4 pt-lg-0 text-justify align-middle ">
-              <p>
+              <p class="text-justify">
                 The positive mentions are green, neutral gray and negative red. We can see that women tend to be described less negatively (50.3% vs. 59.8%),
                  while men are associated with less positive sentences(35.8% vs. 41.3%). The remaining sentences are neutral. But we saw earlier that women 
                  tend to be more represented in Romance Films while men are the majority in Action Movies. Does this influence the results? We have identified 
@@ -368,8 +383,8 @@ Now we will a look at Action movies:
               a lot to the sentiment analysis outcomes. However, despite the percentages greatly shifted towards more positive or negative sentences for both genders depending on the movie genre, we observe
                similar trends as the ones observed for all movies: men seem to be described more negatively than women and women more positively than men.
             </p>
-
-            <h4 class="text-center bspace75">Positivity depends on the genre, but what do the descriptions say about men and women ?
+            <div ckass="bspace25"></div>
+            <h4 class="text-center bspace100">Positivity depends on the genre, but what do the descriptions say about men and women ?
             </h4>
 
             <div class="row content align-items-center bspace100">
@@ -384,8 +399,8 @@ Now we will a look at Action movies:
             <p class="text-justify bspace75">As we can see in the figures above the words “find”, “kill”, “go”, “take” and “tell” are the most popular no matter 
               the gender they describe. Aside from that, we can see some differences but are they predictive of the gender?</p>
 
-              <div class="row content align-items-center bspace50">
-                <h4 class="text-center bspace50">Comparison of Most Predictive Words for each Gender
+              <div class="row content align-items-center bspace100">
+                <h4 class="text-center bspace100">Comparison of Most Predictive Words for each Gender
                 </h4>
                 <p class="text-justify">Below you can see the words that appear in movie descriptions with the highest probability of being associated with male gender in blue and 
                   the same for female words in pink. We have added the results for Romance and Action movies as well as one more genre present in the top 5 most represented genres in the dataset, 
