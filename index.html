@@ -118,7 +118,7 @@
             <p class="text-justify">
               The average fraction of women in the over 40'000 movies in the CMU Movie Summary Corpus is 39%. That sounds reasonably close to 50%, right?
               However, since the dataset was extracted from English language Wikipedia, movies in English logically make up the majority of it. We took a look at that 
-              number in only the movies in the language of Shakespear. We have only 33% of female actors in that group! 
+              number in only the movies in the language of Shakespear. We have only 35% of female actors in that group! 
             </p>
           </div>
           <style>
@@ -246,7 +246,7 @@
           </p>
           </div>
           <div class="col-7">
-            <img src="assets/img/female_actors_movie_genres.png"  alt=""  width="850">
+            <img src="assets/img/female_actors_movie_genres.png"  alt="" class="img-fluid"  width="850">
           </div>
         </div>
 
@@ -320,13 +320,59 @@
              including the stepsisters.</span> <span class="purple"><span class="dark-rosa">Cinderella</span>'s grand entrance immediately attracts everyone's attention and intrigues the 
              <span class="dark-blue">Prince</span>.</span> … <i style="font-size: 30px;" class="bi bi-quote"></i>
           </span>
-          <p>
+          <p class="bspace75">
             Now that we know how it works for one movie summary. Let's take a look at the positivity score over all movies.
           </p>
-          <p>
-            The positive mentions are green, neutral gray and negative red. We can see that women tend to be described less negatively, while men are associated with less positive words. 
-            But we saw earlier that women tend to be more represented in Romance Films while men are the majority in Action Movies. Does this influence the results?
-          </p>
+          <img class="bspace100"src="assets/img/general_10people.jpeg"  alt=""  width="850">
+          </div>
+          <div class="row content align-items-center bspace100">
+            <div class="col-lg-7 pt-4 pt-lg-0 text-justify align-middle ">
+              <p>
+                The positive mentions are green, neutral gray and negative red. We can see that women tend to be described less negatively (50.3% vs. 59.8%), while men are associated with less positive 
+                words (35.8% vs. 41.3%). But we saw earlier that women tend to be more represented in Romance Films while men are the majority in Action Movies. Does this influence the results? We have 
+                identified genre as a possible confounder, so what do the sentiments look like in different genres?
+              </p>
+            </div>
+            <div class="col-4">
+              <div class="box text-justify">
+                <h5 class="text-center">What's a confounder ?</h5>
+                <p>  A confounder or confounding variable is a variable that influences both the variable that we are predicting and the variable that we are using to predict it. 
+                  </p>
+                  <hr>
+            </div>
+            </div>
+          </div>
+
+            <p class="bspace75">        
+              Let's take a look at the stereotypical genres we saw earlier. Again, positive will be green, neutral gray and negative will be red. 
+              Firstly, Romance:
+            </p>
+            <div class="row content align-items-center"><img class="bspace25"src="assets/img/romance_10people.png"  alt=""  width="850"></div>
+            <p class="bspace50">        
+              The mentions of both genders in romance movies tend to be more positive (Male: 49.2% and Female: 53.4%).
+              Now we will a look at action movies:
+
+            </p>
+            <div class="row content align-items-center"><img class="bspace100"src="assets/img/action_10people.png"  alt=""  width="850"></div>
+            <p class="bspace100">
+              We can see that action movies have a much higher percentage of negative sentences for both genders Male: 73.5% and Female: 56.5%)! Our suspicions are confirmed. 
+            </p>
+
+            <h4 class="text-center bspace50">Positivity depends on the genre, but what are the descriptions saying about men and women?
+            </h4>
+
+            <div class="row content align-items-center bspace100">
+              <div class="col-lg-6 pt-4 pt-lg-0 text-justify align-middle ">
+                <img src="assets/img/fs.png" class="img-fluid" alt="">
+              </div>
+              <div class="col-lg-6 pt-4 pt-lg-0 text-justify align-middle ">
+                <img src="assets/img/ms.png" class="img-fluid" alt="">
+              </div>
+            </div>
+
+            <p class="text-justify">As we can see in the figures above the words “find”, “kill”, “go”, “take” and “tell” are the most popular no matter 
+              the gender they describe. Aside from that, we can see some differences but are they predictive of the gender?</p>
+            
 
 
         </div>
